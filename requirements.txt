@@ -1,0 +1,2 @@
+faker
+orjson>=3,<4
