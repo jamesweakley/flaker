@@ -47,14 +47,14 @@ The output from the above `describe` statement will return two pieces of informa
 1) The `API_AWS_IAM_USER_ARN` used to permit Snowflake to assume the AWS role that can call the AWS API gateway
 2) The `API_AWS_EXTERNAL_ID ` used to restrict the scope of the above user to our specific api integration
 
-### Step 4 - Update the AWS infrastructre to trust the Snowflake user
+### Step 4 - Update the AWS infrastructure to trust the Snowflake user
 
 Back on your local command line, run:
 `serverless deploy --region ap-southeast-2 --snowflake_user_arn <API_AWS_IAM_USER_ARN from step 3> --snowflake_external_id <API_AWS_EXTERNAL_ID from step 3>`
 
 Wait for the stack to update successfully.
 
-### Step 5 - Create the external function in Snowflake
+### Step 5 - Create the external functions in Snowflake
 
 Run the following SQL:
 ```
