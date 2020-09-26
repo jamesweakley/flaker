@@ -7,7 +7,7 @@ This repository provides a way to leverage the popular [Faker](https://github.co
 
 
 
-The implementation uses a Snowflake External Function that calls out to the library via API Gateway, where it executes on a Lambda function.
+The implementation uses a Snowflake External Function that calls out to the library via API Gateway, where it executes in a Lambda function.
 
 You can use any of the standard providers listed [here](https://faker.readthedocs.io/en/master/providers.html).
 
