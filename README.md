@@ -1,7 +1,7 @@
 # flaker
 Faker for Snowflake! (AWS only)
 
-This repository provides a way to leverage the popular faker python library directly from a Snowflake query.
+This repository provides a way to leverage the popular [Faker](https://github.com/joke2k/faker) python library directly from a Snowflake query.
 
 The implementation uses a Snowflake External Function that calls out to the library via API Gateway, where it executes on a Lambda function.
 
