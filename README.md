@@ -17,7 +17,7 @@ It scales really nicely due to the batch processing of external functions, meani
 
 2) Follow the [setup guide](https://www.serverless.com/framework/docs/providers/aws/guide/credentials/) to authenticate to your AWS account, ready to deploy
 
-### Step 2 - Deploy the API Gateway (sans permissions)
+### Step 2 - Deploy the API Gateway (sans Snowflake privileges)
 
 Clone this repo, cd into it and run: `serverless deploy --config serverless-initial.yml --region ap-southeast-2`
 
