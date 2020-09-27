@@ -30,8 +30,6 @@ custom:
   snowflake_user_arn: ${opt:snowflake_user_arn,'*'}
   snowflake_external_id: ${opt:snowflake_external_id,'*'}
   external_function_role: SnowflakeExternalFunctionExecutionRole
-  pythonRequirements:
-    dockerizePip: non-linux
 
 functions:
   fake:

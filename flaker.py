@@ -1,9 +1,12 @@
-import orjson, decimal
+import json,datetime,decimal
 from faker import Faker
 
 def default_json_transform(obj):
     if isinstance(obj, decimal.Decimal):
         return str(obj)
+    if isinstance(obj, (datetime.date, datetime.datetime)):
+        return obj.isoformat()
+
     raise TypeError
 
 def fake(event, context):
@@ -17,7 +20,7 @@ def fake(event, context):
 
     try:
         # Convert the input from Snowflake a JSON string into a JSON object.
-        payload = orjson.loads(event["body"])
+        payload = json.loads(event["body"])
 
         # This is basically an array of arrays. The inner array contains the
         # row number, and a value for each parameter passed to the function.
@@ -50,13 +53,13 @@ def fake(event, context):
 
             # ... and add that array to the main array.
             array_of_rows_to_return.append(row_to_return)
-        json_compatible_string_to_return = orjson.dumps({"data" : array_of_rows_to_return}, default=default_json_transform)
+        json_compatible_string_to_return = json.dumps({"data" : array_of_rows_to_return}, default=default_json_transform)
 
     except Exception as err:
         # 400 implies some type of error.
         status_code = 400
         # Tell caller what this function could not handle.
-        json_compatible_string_to_return = orjson.dumps({"data" : row,"error" : str(err)})
+        json_compatible_string_to_return = json.dumps({"data" : row,"error" : str(err)})
 
     # Return the return value and HTTP status code.
     return {

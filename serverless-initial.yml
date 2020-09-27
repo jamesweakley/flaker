@@ -10,8 +10,6 @@ plugins:
 
 custom:
   external_function_role: SnowflakeExternalFunctionExecutionRole
-  pythonRequirements:
-    dockerizePip: non-linux
 
 functions:
   fake:
