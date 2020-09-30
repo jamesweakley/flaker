@@ -13,6 +13,10 @@ You can use any of the standard providers listed [here](https://faker.readthedoc
 
 It scales really nicely due to the batch processing of external functions, meaning you can generate large quantities of fake data in seconds.
 
+## Contributors
+
+- James Weakley ([Omnata](https://omnata.com))
+
 ## Installation
 
 ### Step 1 - Prerequisites
