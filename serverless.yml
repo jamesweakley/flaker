@@ -58,3 +58,6 @@ resources:
               Condition: {"StringEquals": { "sts:ExternalId": "${self:custom.snowflake_external_id}" }}
         RoleName: ${self:custom.external_function_role}
         Path: "/"
+  Outputs:
+    SnowflakeExternalFunctionRole:
+      Value: !GetAtt SnowflakeExternalFunctionExecutionRole.Arn
