@@ -13,6 +13,8 @@ You can use any of the standard providers listed [here](https://faker.readthedoc
 
 It scales really nicely due to the batch processing of external functions, meaning you can generate large quantities of fake data in seconds.
 
+Read the [Medium article](https://medium.com/@jamesweakley/generating-realistic-looking-fake-data-in-snowflake-aab18cc95c7?source=friends_link&sk=8369cd335ad7e3100a7d3b38246ed68a) for further info and examples.
+
 ## Contributors
 
 - James Weakley ([Omnata](https://omnata.com))
