@@ -40,7 +40,7 @@ Read the [new Medium article](https://medium.com/snowflake/dc5e65225a13) for fur
 
 Generate 5000 fake names, in the US English locale:
 ```
-select FAKE('en_US','name') as FAKE_NAME
+select FAKE('en_US','name',{}) as FAKE_NAME
     from table(generator(rowcount => 5000))
 ```
 ![fake names example](/example_names.png "Example")
